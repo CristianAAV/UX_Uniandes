@@ -1,0 +1,35 @@
+<app-breadcrumb [items]="[
+  { label: 'Inicio', url: '/' },
+  { label: 'Trabajadores', url: '/trabajadores' },
+  { label: 'Detalle', url: '/trabajadores/' + trabajador?.id }
+]"></app-breadcrumb>
+<div *ngIf="trabajador"  class="item-container-center">  
+  <div class="titulo-seccion">{{ trabajador.nombre}}</div>
+
+  <div class="container-trabajador">
+    <img matListAvatar [src]="trabajador.imagen" alt="Person" class="img-trabajador">
+    <div class="container-trabajador-datos">
+      <div class="sub-titulo-seccion">Correo:</div>
+      <div class="contenido-seccion">{{ trabajador.correo }}</div>
+      <div class="sub-titulo-seccion">Telefono:</div>
+      <div class="contenido-seccion">{{ trabajador.telefono }}</div>
+      <div class="sub-titulo-seccion">Puesto:</div>
+      <div class="contenido-seccion">{{ trabajador.puesto }}</div>
+    </div>
+  </div>
+
+  <div class="container-trabajador-opciones">
+    <button class="btn-opcion" (click)="verInformes(trabajador.id)">
+      <mat-icon>attach_file</mat-icon>
+      Informes
+    </button>
+    <button class="btn-opcion" (click)="verRecorridos(trabajador.id)">
+      <mat-icon>directions_walk</mat-icon>
+      Recorridos
+    </button>  
+  </div>
+</div>
+
+
+
+

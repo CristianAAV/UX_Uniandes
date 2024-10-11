@@ -1,0 +1,36 @@
+@import '../../../assets/parcial/colors';
+.informe-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.informe-item {
+  display: flex;
+  align-items: center;
+  background-color: $paleta-amarillo;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 1.5em;
+  padding: 10px 0;
+}
+
+.fecha-hora {
+  width: 140px;
+  text-align: left;
+}
+
+.informe {
+  flex: 1; // Ocupa todo el espacio restante
+  text-align: left;
+  margin-left: 10px;
+}
+
+.posicion {
+  width: 90px;
+  text-align: left;  
+}
+
+.informe-item-header{
+  font-weight: bold;  
+  background: transparent;
+}

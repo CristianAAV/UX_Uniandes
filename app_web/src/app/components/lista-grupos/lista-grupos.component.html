@@ -1,0 +1,18 @@
+<app-breadcrumb [items]="[
+  { label: 'Inicio', url: '/' },
+  { label: 'Grupos', url: '/grupos' }
+]"></app-breadcrumb>
+
+<div class="item-container-center">
+  <div class="titulo-seccion">Lista de Grupos de Trabajo</div>
+  <div *ngFor="let grupo of grupos">
+    <div class="item-content">
+      <img matListAvatar [src]="grupo.imagen" alt="Grupo" class="item-img-mini">
+      <span class="item-texto">{{ grupo.nombre }}</span>
+      <div class="item-icons-right">
+        <mat-icon class="item-icon">delete</mat-icon>
+        <mat-icon class="item-icon" (click)="verDetalles(grupo.id)">edit</mat-icon>  
+      </div>
+    </div>
+  </div>
+</div>

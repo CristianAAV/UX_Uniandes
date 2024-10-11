@@ -1,0 +1,31 @@
+@import '../../../assets/parcial/colors';
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 60px 0px;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+}
+.menu-logo {
+  margin-right: 20px; /* Space between logo and links */
+}
+.menu-logo img {
+  height: 140px; /* Adjust as needed */
+}
+
+.menu-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu-links li {
+  margin-right: 20px; /* Space between links */
+}
+.menu-links a {
+  text-decoration: none;
+  font-size: 32px;
+}

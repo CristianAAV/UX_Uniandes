@@ -1,0 +1,34 @@
+@import '../../../assets/parcial/colors';
+
+.nav-container{  
+  background-color: $paleta-granate;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 0;
+  background-color: $paleta-granate; /* Color de fondo para la barra de navegación */
+  height: 60px;
+  margin-left: 80px;
+}
+
+.breadcrumb-item {
+  margin-right: 0.5rem;
+}
+
+.breadcrumb-item.active {
+  font-weight: bold;/* Color de resaltado para el último elemento */
+  color: $paleta-amarillo;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: $paleta-amarillo; /* Color normal para los enlaces */
+}
+
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}

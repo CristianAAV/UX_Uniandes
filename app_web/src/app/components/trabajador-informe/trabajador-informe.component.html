@@ -1,0 +1,27 @@
+<app-breadcrumb [items]="[
+  { label: 'Inicio', url: '/' },
+  { label: 'Trabajadores', url: '/trabajadores' },
+  { label: 'Detalle', url: '/trabajadores/' + trabajador?.id },
+  { label: 'Informes', url: '/trabajadores/' + trabajador?.id +'/informes' }
+]"></app-breadcrumb>
+
+<div *ngIf="trabajador"  class="item-container-center">  
+  <div class="titulo-seccion">{{ trabajador.nombre}}</div>
+  <div class="sub-titulo-seccion-centered">Listado de Informes</div>
+
+  <div class="informe-item informe-item-header">
+    <div class="fecha-hora ">Fecha y Hora</div>
+    <div class="informe">Informe</div>
+    <div class="posicion">Posición</div>
+  </div>
+
+  <div class="informe-list">
+    <div class="informe-item" *ngFor="let informe of informes">
+      <div class="fecha-hora">{{ informe.fechaHora }}</div>
+      <div class="informe">{{ informe.informe }}</div>
+      <div class="posicion">
+        <mat-icon>{{ informe.posicion ? 'check_box' : 'check_box_outline_blank' }}</mat-icon>
+      </div>
+    </div>
+  </div>    
+</div>

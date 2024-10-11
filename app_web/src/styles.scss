@@ -1,0 +1,132 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../src/assets/parcial/colors';
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: $paleta-granate;
+  background: $color-fondo;
+  background: 
+    url('assets/images/pencil.png') no-repeat left bottom, /* Imagen en la izquierda */
+    url('assets/images/pen.png') no-repeat right bottom, /* Imagen en la derecha */
+    $color-fondo; /* Degradado de fondo */
+    background-size: 300px 300px, 512px 512px, cover; /* Tamaño fijo para las imágenes */
+    background-attachment: fixed; /* Asegura que el fondo no se mueva con el scroll */
+    z-index: -1; /* Envía las imágenes al fondo */
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a {
+  color: inherit; /* Para asegurar que hereden el color */
+}
+
+/********************************** Seccion **********************************/
+.titulo-seccion{
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.sub-titulo-seccion{
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.sub-titulo-seccion-centered{
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+.contenido-seccion{
+  text-align: left;
+  margin-top: 10px;
+}
+/*****************************************************************************/
+/*********************************** Botones *********************************/
+.btn-logout {
+  background-color: $paleta-plomo; /* Example button color */
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  margin-right: 40px;
+}
+
+.btn-logout:hover {
+  background-color: $paleta-plomo-hover; 
+}
+
+.btn-opcion {
+  background-color: $paleta-rojo; /* Example button color */
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.btn-opcion:hover {
+  background-color: $paleta-rojo-hover; /* Example button hover color */
+}
+
+/*****************************************************************************/
+/************************************ Item ***********************************/
+.item-container-center {
+  width: 50%; /* Ancho del div */  
+  margin: 0 auto; /* Centra el div horizontalmente */
+  text-align: center;
+}
+
+.item-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $paleta-amarillo;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+.item-img-mini{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Recorta la imagen en un círculo */
+  object-fit: cover;  /* Asegura que la imagen se ajuste dentro del círculo */
+}
+
+.item-texto {
+  flex-grow: 1; /* Ocupa todo el espacio disponible */
+  margin-left: 40px; /* Añade espacio entre el nombre y los iconos */
+  text-align: left;  
+}
+.item-icons-right {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.item-icon {
+  color: $paleta-granate; /* Default color */
+  cursor: pointer;
+  transform: scale(2);  
+}
+
+.item-icon:hover {
+  color: $paleta-rojo; /* Hover color */
+}
+/*****************************************************************************/
+/*****************************************************************************/
+/*****************************************************************************/
+
+/*****************************************************************************/
+/*****************************************************************************/

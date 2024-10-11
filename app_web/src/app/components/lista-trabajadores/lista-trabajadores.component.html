@@ -1,0 +1,17 @@
+<app-breadcrumb [items]="[
+  { label: 'Inicio', url: '/' },
+  { label: 'Trabajadores', url: '/trabajadores' }
+]"></app-breadcrumb>
+<div class="item-container-center">
+  <div class="titulo-seccion">Lista de Trabajadores</div>
+  <div *ngFor="let trabajador of trabajadores">
+    <div class="item-content">
+      <img matListAvatar [src]="trabajador.imagen" alt="Person" class="item-img-mini">
+      <span class="item-texto">{{ trabajador.nombre }}</span>
+      <div class="item-icons-right">
+          <mat-icon class="item-icon" >delete</mat-icon>
+          <mat-icon class="item-icon" (click)="verDetalles(trabajador.id)">edit</mat-icon>
+      </div>
+    </div>
+  </div>
+</div>

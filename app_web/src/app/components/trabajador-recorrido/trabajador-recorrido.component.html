@@ -1,0 +1,33 @@
+<app-breadcrumb [items]="[
+  { label: 'Inicio', url: '/' },
+  { label: 'Trabajadores', url: '/trabajadores' },
+  { label: 'Detalle', url: '/trabajadores/' + trabajador?.id },
+  { label: 'Informes', url: '/trabajadores/' + trabajador?.id +'/recorridos' }
+]"></app-breadcrumb>
+
+
+<div *ngIf="trabajador"  class="item-container-center">  
+  <div class="titulo-seccion">{{ trabajador.nombre}}</div>
+  <div class="sub-titulo-seccion-centered">Recorridos</div>
+  <div class="contenedor-fecha">
+    <div class="sub-titulo-seccion">Seleccione Fecha:</div>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" (dateChange)="onDateChange($event)">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <google-map height="450px"
+    width="100%"
+    [center]="center"
+    [zoom]="zoom">
+    <map-marker *ngFor="let marker of markers"
+      [position]="marker.position"
+      [label]="marker.label"
+      [title]="marker.title"
+      [options]="marker.options"
+    >
+    </map-marker>              
+  </google-map>
+</div>

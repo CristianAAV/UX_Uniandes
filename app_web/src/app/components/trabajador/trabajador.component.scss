@@ -1,0 +1,20 @@
+.img-trabajador {
+  width: 256px;
+  height: 256px;
+  border-radius: 50%; /* Recorta la imagen en un círculo */
+  object-fit: cover;  /* Asegura que la imagen se ajuste dentro del círculo */
+}
+
+.container-trabajador{
+  display: flex;
+  flex-direction: row;
+}
+.container-trabajador-datos{
+  margin-left: 50px;
+}
+.container-trabajador-opciones{
+  display: flex;
+  justify-content: flex-end;
+  gap: 60px;
+  margin-top: 20px;
+}
